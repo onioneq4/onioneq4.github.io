@@ -2,18 +2,27 @@ body {
     font-family: 'Source Code Pro', monospace;
     color: #fff;
     background-color: #262626;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-@keyframes curanim {
-    from {color: #262626}
-    to {color: #fff}
+@keyframes blink {
+  from, to {
+    color:  transparent;
+  }
+  50% {
+    color: #fff;
+  }
 }
 
 .cur {
-    color: #262626;
-    animation-delay: 500ms;
-    animation-name: curanim;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: 1500ms blink step-end infinite;
+}
+
+a {
+    color: #ffea00 !important;
+}
+
+.lang {
+    float: right;
 }
